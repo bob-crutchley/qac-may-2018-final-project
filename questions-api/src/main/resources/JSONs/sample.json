@@ -1,0 +1,106 @@
+[
+  {
+    "id": 1,
+    "levelDifficulty": 1,
+    "levelPosition": 1,
+    "levelNumber": "1A",
+    "levelName": "Hello World!",
+    "levelDescription": "Put a child friendly description of level here (Build Hello World)",
+    "levelCode": {
+      "question": [
+        "public class Hello{<br>&emsp;public static void main() {<br>&emsp;&emsp;System.out.println(\"Hello World\")",
+        "<br>&emsp;}<br>}",
+        "//this is the last line ensuring there is a div at the end of the previous line."
+      ]
+    },
+    "timer": 600,
+    "chances": 5,
+    "solution": [
+      {
+        "answerPosition": "place1",
+        "answerCodeSnippet": ";",
+        "id": 5
+      },
+      {
+        "answerPosition": "placeD",
+        "answerCodeSnippet": ".",
+        "id": 6
+      },
+      {
+        "answerPosition": "place2",
+        "answerCodeSnippet": "hello",
+        "id": 7
+      }
+    ]
+  },
+  {
+    "id":5,
+    "levelDifficulty": 1,
+    "levelPosition": 2,
+    "levelNumber": "1B",
+    "levelName": "What Are We!",
+    "levelDescription": "Put a child friendly description of level here (Build Hello World)",
+    "levelCode":{
+      "question":[
+        "What are we?",
+        "<br>&emsp;}<br>"
+      ]
+    },
+    "timer": 600,
+    "chances": 5,
+    "solution": [
+      {
+        "id":6,
+        "answerPosition": "place1",
+        "answerCodeSnippet": "Full Stack Developers"
+      },
+      {
+        "id":7,
+        "answerPosition": "placeD",
+        "answerCodeSnippet": "n00bs"
+      },
+      {
+        "id":8,
+        "answerPosition": "placeD",
+        "answerCodeSnippet": "PHP Developers"
+      },
+      {
+        "id":9,
+        "answerPosition": "placeD",
+        "answerCodeSnippet": "Dancer"
+      }
+    ]
+  },
+  {
+    "id":10,
+    "levelDifficulty": 1,
+    "levelPosition": 3,
+    "levelNumber": "2A",
+    "levelName": "Hello World!",
+    "levelDescription": "Put a child friendly description of level here (Build Hello World)",
+    "levelCode":
+    {
+      "question":[
+        "What is Java Good and Bad at? <br />",
+        "<table><tr><th>Known For</th><th>Not Known For</th></tr>",
+        "<tr><td><br>&emsp<br></td><td><br>&emsp;}<br></td></tr>",
+        "</table>"
+
+      ]
+    },
+    "timer": 600,
+    "chances": 5,
+    "solution": [
+      {
+        "id":11,
+        "answerPosition": "place1",
+        "answerCodeSnippet": "Being Awesome"
+      },
+      {
+        "id":12,
+        "answerPosition": "place2",
+        "answerCodeSnippet": "Used By Losers"
+      }
+    ]
+  }
+]

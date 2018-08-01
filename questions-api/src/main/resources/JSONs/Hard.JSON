@@ -1,0 +1,65 @@
+[
+  {
+    "id":14,
+    "levelDifficulty": 3,
+    "levelPosition": 1,
+    "levelNumber": "1A",
+    "levelName": "Hello World!",
+    "levelDescription": "Put a child friendly description of level here (Build Hello World)",
+    "levelCode": "<div>    public class Hello{<br />    <span id=\"place1\" ondrop=\"drop(event)\" ondragover=\"allowDrop(event)\" class=            \"place\">&emsp;&emsp;</span> <span id=\"place2\" ondrop=\"drop(event)\" ondragover=        \"allowDrop(event)\" class=\"place\">&emsp;&emsp;</span> <span id=\"place3\" ondrop=        \"drop(event)\" ondragover=\"allowDrop(event)\" class=\"place\">&emsp;&emsp;</span> main()    {<br />    <span id=\"place4\" ondrop=\"drop(event)\" ondragover=\"allowDrop(event)\" class=            \"place\">&emsp;&emsp;</span> .out.println(\"Hello <span id=\"place5\" ondrop=        \"drop(event)\" ondragover=\"allowDrop(event)\" class=\"place\">&emsp;&emsp;</span> \")    <span id=\"place6\" ondrop=\"drop(event)\" ondragover=\"allowDrop(event)\" class=            \"place\">&emsp;&emsp;</span><br />    <span id=\"place7\" ondrop=\"drop(event)\" ondragover=\"allowDrop(event)\" class=\"place\">&emsp;&emsp;</span></div>",
+    "timer": 600,
+    "chances": 5,
+    "solution": [
+      {
+        "id":15,
+        "answerPosition": "place1",
+        "answerCodeSnippet": "public"
+      },
+      {
+        "id":16,
+        "answerPosition": "place2",
+        "answerCodeSnippet": "static"
+      },
+      {
+        "id":17,
+        "answerPosition": "place3",
+        "answerCodeSnippet": "void"
+      },
+      {
+        "id":18,
+        "answerPosition": "place4",
+        "answerCodeSnippet": "System"
+      },
+      {
+        "id":19,
+        "answerPosition": "place5",
+        "answerCodeSnippet": "world"
+      },
+      {
+        "id":20,
+        "answerPosition": "place6",
+        "answerCodeSnippet": ";"
+      },
+      {
+        "id":21,
+        "answerPosition": "place7",
+        "answerCodeSnippet": "}"
+      },
+      {
+        "id":22,
+        "answerPosition": "placeD",
+        "answerCodeSnippet": "system"
+      },
+      {
+        "id":23,
+        "answerPosition": "placeD",
+        "answerCodeSnippet": "Public"
+      },
+      {
+        "id":24,
+        "answerPosition": "placeD",
+        "answerCodeSnippet": "String"
+      }
+    ]
+  }
+]
