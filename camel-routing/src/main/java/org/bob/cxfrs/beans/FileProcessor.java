@@ -12,7 +12,8 @@ public class FileProcessor implements Processor {
 
          User user = exchange.getIn().getBody(User.class);
          exchange.setProperty("test", user.getName());
-         exchange.getOut().setBody(user.getName());
+         String auditBody = "Name: "+ user.getName() +"\nScore: "+ user.getScore() +"\nEmail: "+ user.getEmail();
+         exchange.getOut().setBody(auditBody);
 
     }
 

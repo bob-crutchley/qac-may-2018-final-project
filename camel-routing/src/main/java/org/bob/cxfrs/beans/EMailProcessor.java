@@ -13,8 +13,8 @@ public class EMailProcessor implements Processor {
         exchange.setProperty("score", user.getScore());
         exchange.setProperty("email", user.getEmail());
         exchange.getOut().setHeader("email", user.getEmail());
-        exchange.getOut().setBody(Constants.HELLO + " " + exchange.getProperty("name") + "\n \n" + Constants.CONGRATS_MESSAGE + " " + exchange.getProperty("score") +
-                Constants.FIVE_SPACES + Constants.FOOTER);
+        exchange.getOut().setBody(Constants.HELLO + " " + exchange.getProperty("name") + ",\n \n" + Constants.CONGRATS_MESSAGE + " " + exchange.getProperty("score")
+                + ".\n \n" + Constants.FOOTER);
 
     }
 }
