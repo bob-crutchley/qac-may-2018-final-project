@@ -8,10 +8,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -38,6 +35,7 @@ public class UserDataController {
     @Autowired
     private RabbitTemplate rabbitTemplate;
 
+    @CrossOrigin(origins = "http://localhost:3000")
     @RequestMapping("/user/all")
     public List<User> getAll() {
         log.info("getting all users. total {}", userRepository.count());
@@ -46,8 +44,9 @@ public class UserDataController {
         return target;
     }
 
+    @CrossOrigin(origins = "http://localhost:3000")
     @RequestMapping("user/highscores/{count}")
-    public List<User> getTop10(@PathVariable int count){
+    public List<User> getTop10(@PathVariable Long count){
 
 
         List<User> userList = new ArrayList<>();
@@ -57,6 +56,7 @@ public class UserDataController {
         return userList;
     }
 
+    @CrossOrigin(origins = "http://localhost:3000")
     @RequestMapping("/user/save")
     public User save(@RequestBody User user){
         log.info("adding a new user: {}", user.toString());
