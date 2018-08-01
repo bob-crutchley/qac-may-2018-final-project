@@ -7,9 +7,6 @@
        http://camel.apache.org/schema/spring http://camel.apache.org/schema/spring/camel-spring.xsd"
 	   xmlns:jdbc="http://www.springframework.org/schema/c">
 
-	<cxf:rsServer id="restService" address="http://localhost:9000/user"
-				  serviceClass="org.bob.cxfrs.beans.EmployeeServiceResource">
-	</cxf:rsServer>
 
 	<cxf:rsServer id="auditService" address="http://localhost:9000/audit"
 				  serviceClass="org.bob.cxfrs.beans.AuditServiceResource">
@@ -37,8 +34,6 @@
 		<property name="dataSource" ref="myDataSource" />
 	</bean>
 
-	<bean id="myRoute" class="org.bob.cxfrs.beans.EmployeeServiceRouteBuilder">
-	</bean>
 	<bean id="auditRoute" class="org.bob.cxfrs.beans.AuditServiceRouteBuilder">
 	</bean>
     <bean id="databaseRoute" class="org.bob.cxfrs.beans.DataBaseServiceRouteBuilder">
@@ -48,7 +43,6 @@
 
 	<camelContext id="camelId" xmlns="http://camel.apache.org/schema/spring">
 
-        <routeBuilder ref="myRoute" />
 		<routeBuilder ref="auditRoute"/>
         <routeBuilder ref="databaseRoute"/>
         <routeBuilder ref="emailRoute"/>
