@@ -7,9 +7,9 @@ public class User {
 
     JSONUtil util = new JSONUtil();
 
-    private long id;
+    private Long id;
     private String name;
-    private String score;
+    private Long score;
     private String email;
 
     public String getEmail() {
@@ -20,19 +20,19 @@ public class User {
         this.email = email;
     }
 
-    public String getScore() {
+    public Long getScore() {
         return score;
     }
 
-    public void setScore(String score) {
+    public void setScore(Long score) {
         this.score = score;
     }
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

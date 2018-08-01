@@ -1,5 +1,6 @@
 package com.qa;
 
+import com.qa.constants.Constants;
 import org.springframework.stereotype.Component;
 
 import java.io.*;
@@ -10,33 +11,42 @@ import java.net.URL;
 @Component
 public class Receiver {
 
-    private final String USER_AGENT = "Mozilla/5.0";
+
 
     public void receiveMessage(String postJsonData) throws IOException {
 
-        httpPost("http://localhost:9000/email", postJsonData);
-        httpPost("http://localhost:9000/audit", postJsonData);
-        httpPost("http://localhost:9000/database", postJsonData);
+        String emailJson = postJsonData;
+        String databaseJson = postJsonData;
+
+
+        httpPost(Constants.AUDIT_URL, postJsonData);
+        System.out.println(postJsonData);
+        httpPost(Constants.EMAIL_URL, emailJson);
+        System.out.println(postJsonData);
+        httpPost(Constants.DATABASE_URL, databaseJson);
 
     }
+//
 
-    private void httpPost(String url, String postJsonData) throws IOException{
+    private void httpPost(String url, String postJsonData) throws IOException {
         URL obj = new URL(url);
         HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 
         con.setRequestMethod("POST");
-        con.setRequestProperty("User-Agent", USER_AGENT);
-        con.setRequestProperty("Accept-Language", "en-US,en;q=0.5");
+        con.setRequestProperty("User-Agent", Constants.USER_AGENT);
+        con.setRequestProperty("Accept-Language", Constants.LANGUAGE );
         con.setRequestProperty("Content-Type", "application/json");
 
         con.setDoOutput(true);
         DataOutputStream os = new DataOutputStream(con.getOutputStream());
         os.writeBytes(postJsonData);
         os.flush();
+//        os.close();
 
 
         int responseCode = con.getResponseCode();
         System.out.println("\nSending 'POST' request to URL : " + url);
+        System.out.println("jsondata: " + postJsonData);
         System.out.println("Response Code : " + responseCode);
 
         BufferedReader in = new BufferedReader(new InputStreamReader(con.getInputStream()));
@@ -45,8 +55,8 @@ public class Receiver {
 
         while ((output = in.readLine()) != null) {
             response.append(output);
+//            in.close();
         }
-
 
 
         System.out.println("Response: " + response.toString());

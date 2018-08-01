@@ -10,6 +10,7 @@ public class UserProcessor implements Processor {
     public void process(Exchange exchange) throws Exception {
 
         String msg = exchange.getIn().getBody(String.class);
+        System.out.println(msg);
         User user = new JSONUtil().getObjectForJSON(msg, User.class);
         exchange.getOut().setBody(user);
 

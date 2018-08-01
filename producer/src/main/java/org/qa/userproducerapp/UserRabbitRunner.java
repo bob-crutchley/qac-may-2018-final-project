@@ -25,8 +25,6 @@ public class UserRabbitRunner implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception{
-        User[] user = restTemplate.getForObject(
-                Constants.API_ADDRESS, User[].class);
-        rabbitTemplate.convertAndSend(UserApplication.topicExchangeName, "foo.bar.baz", gson.toJson(user));
+
     }
 }
