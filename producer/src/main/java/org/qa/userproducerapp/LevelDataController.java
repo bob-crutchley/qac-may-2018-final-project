@@ -36,7 +36,7 @@ public class LevelDataController {
 
     private final Logger log = LoggerFactory.getLogger(this.getClass());
 
-    @CrossOrigin(origins="http://localhost:3000")
+    @CrossOrigin(origins = "http://localhost:3000")
     @RequestMapping("/getAll")
     private String getAllQuestions(){
 
@@ -49,7 +49,7 @@ public class LevelDataController {
         return questions;
     }
 
-    @CrossOrigin(origins="http://localhost:3000")
+    @CrossOrigin(origins = "http://localhost:3000")
     @RequestMapping(value = "/difficulty/{level}", method = RequestMethod.GET)
     private String getLevel(@PathVariable Long level){
 
@@ -59,7 +59,7 @@ public class LevelDataController {
         return question;
     }
 
-    @CrossOrigin(origins="http://localhost:3000")
+    @CrossOrigin(origins = "http://localhost:3000")
     @RequestMapping(value = "/elastic/{difficulty}", method = RequestMethod.GET)
     public Optional<Level> getLevelFromElastic(@PathVariable Long difficulty){
 

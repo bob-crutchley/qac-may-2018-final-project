@@ -34,7 +34,8 @@ public class UserDataController {
 
     @Autowired
     private RabbitTemplate rabbitTemplate;
-    @CrossOrigin(origins="http://localhost:3000")
+
+    @CrossOrigin(origins = "http://localhost:3000")
     @RequestMapping("/user/all")
     public List<User> getAll() {
         log.info("getting all users. total {}", userRepository.count());
@@ -43,7 +44,7 @@ public class UserDataController {
         return target;
     }
 
-    @CrossOrigin(origins="http://localhost:3000")
+    @CrossOrigin(origins = "http://localhost:3000")
     @RequestMapping("user/highscores/{count}")
     public List<User> getTop10(@PathVariable int count){
 
@@ -55,7 +56,7 @@ public class UserDataController {
         return userList;
     }
 
-    @CrossOrigin(origins="http://localhost:3000")
+    @CrossOrigin(origins = "http://localhost:3000")
     @RequestMapping("/user/save")
     public User save(@RequestBody User user){
         log.info("adding a new user: {}", user.toString());

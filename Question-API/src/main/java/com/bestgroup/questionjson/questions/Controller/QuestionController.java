@@ -27,11 +27,11 @@ public class QuestionController {
     @RequestMapping(value = "/difficulty/{level}", method = RequestMethod.GET)
     public String getByLevels(@PathVariable int level){
         if (level == 1){
-            return jsonToString("src/main/resources/JSONs/Easy.JSON");
+            return jsonToString("/home/benny/Documents/gitClones/qac-may-2018-final-project/Question-API/src/main/resources/JSONs/Easy.JSON");
         }else if ( level == 2){
-            return jsonToString("src/main/resources/JSONs/Medium.JSON");
+            return jsonToString("/home/benny/Documents/gitClones/qac-may-2018-final-project/Question-API/src/main/resources/JSONs/Medium.JSON");
         }else if (level == 3){
-            return jsonToString("src/main/resources/JSONs/Hard.JSON");
+            return jsonToString("/home/benny/Documents/gitClones/qac-may-2018-final-project/Question-API/src/main/resources/JSONs/Hard.JSON");
         }else{
             return "{\"Error\":\"Level Not Defined\"}";
         }
