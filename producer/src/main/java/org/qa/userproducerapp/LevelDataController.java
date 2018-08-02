@@ -10,10 +10,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.ArrayList;
@@ -39,6 +36,7 @@ public class LevelDataController {
 
     private final Logger log = LoggerFactory.getLogger(this.getClass());
 
+    @CrossOrigin(origins="http://localhost:3000")
     @RequestMapping("/getAll")
     private String getAllQuestions(){
 
@@ -51,6 +49,7 @@ public class LevelDataController {
         return questions;
     }
 
+    @CrossOrigin(origins="http://localhost:3000")
     @RequestMapping(value = "/difficulty/{level}", method = RequestMethod.GET)
     private String getLevel(@PathVariable Long level){
 
@@ -59,6 +58,8 @@ public class LevelDataController {
         levelRepository.save(lev);
         return question;
     }
+
+    @CrossOrigin(origins="http://localhost:3000")
     @RequestMapping(value = "/elastic/{difficulty}", method = RequestMethod.GET)
     public Optional<Level> getLevelFromElastic(@PathVariable Long difficulty){
 
