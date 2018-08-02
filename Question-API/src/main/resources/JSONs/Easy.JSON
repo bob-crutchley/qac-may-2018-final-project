@@ -1,0 +1,164 @@
+[{
+  "id": 1,
+  "levelDifficulty": 1,
+  "levelPosition": 1,
+  "levelNumber": "1A",
+  "levelName": "Hello World!",
+  "lesson": "We can not change an int to a String. this will return an error.",
+  "levelDescription": "basic int ",
+  "levelCode": {
+    "question": [
+      "int myAge = ",
+      "<br><br>What is the value of myAge?"
+    ]
+  },
+  "timer": 600,
+  "chances": 5,
+  "solution": [{
+    "answerPosition": "place1",
+    "answerCodeSnippet": "10",
+    "id": 5
+  }, {
+    "answerPosition": "placeD",
+    "answerCodeSnippet": "ten",
+    "id": 6
+  }, {
+    "answerPosition": "placeD",
+    "answerCodeSnippet": "10.0",
+    "id": 7
+  }]
+},
+  {
+    "id": 2,
+    "levelDifficulty": 1,
+    "levelPosition": 1,
+    "levelNumber": "1B",
+    "levelName": "Hello World!",
+    "lesson": "We can have tasks called methods, they can take in data and return a result. isEven() will take an int inside the brackets and return true or false.",
+    "levelDescription": "basic int ",
+    "levelCode": {
+      "question": [
+        " int myAge = 10;<br>isEven(myAge);<br><br>Will this return true or false?<br>",
+        ""
+      ]
+    },
+    "timer": 600,
+    "chances": 5,
+    "solution": [{
+      "answerPosition": "placeD",
+      "answerCodeSnippet": "false",
+      "id": 5
+    }, {
+      "answerPosition": "place1",
+      "answerCodeSnippet": "true",
+      "id": 6
+    }]
+  },
+  {
+    "id": 3,
+    "levelDifficulty": 1,
+    "levelPosition": 1,
+    "levelNumber": "2A",
+    "levelName": "Hello World!",
+    "lesson": "With numbers it can be tricky to get what we want.If we divide an int (whole number) the results will be a whole number rounded down. This can cause some problems.",
+    "levelDescription": "basic int ",
+    "levelCode": {
+      "question": [
+        "int myInt = 7; <br>value = myInt / 2;<br><br>What will the number in value be?<br>",
+        ""
+      ]
+    },
+    "timer": 600,
+    "chances": 5,
+    "solution": [{
+      "answerPosition": "placeD",
+      "answerCodeSnippet": "7",
+      "id": 5
+    },{
+      "answerPosition": "placeD",
+      "answerCodeSnippet": "3.5",
+      "id": 7
+    }, {
+      "answerPosition": "place1",
+      "answerCodeSnippet": "3",
+      "id": 8
+    }, {
+      "answerPosition": "placeD",
+      "answerCodeSnippet": "4",
+      "id": 9
+    }]
+  },
+  {
+    "id": 4,
+    "levelDifficulty": 1,
+    "levelPosition": 1,
+    "levelNumber": "2B",
+    "levelName": "Hello World!",
+    "lesson": "To get around this we use a new data type called a \"double\".This allows decimal places.",
+    "levelDescription": "basic int ",
+    "levelCode": {
+      "question": [
+        " double myDouble = 7; value = myDouble / 2;<br><br>What will the number in value be?<br>",
+        ""
+      ]
+    },
+    "timer": 600,
+    "chances": 5,
+    "solution": [{
+      "answerPosition": "placeD",
+      "answerCodeSnippet": "7",
+      "id": 5
+    }, {
+      "answerPosition": "place1",
+      "answerCodeSnippet": "3.5",
+      "id": 7
+    }, {
+      "answerPosition": "placeD",
+      "answerCodeSnippet": "3!",
+      "id": 8
+    }, {
+      "answerPosition": "placeD",
+      "answerCodeSnippet": "4",
+      "id": 9
+    }]
+  },
+  {
+    "id": 5,
+    "levelDifficulty": 1,
+    "levelPosition": 1,
+    "levelNumber": "3",
+    "levelName": "Hello World!",
+    "lesson": "We can use these data types to get information. We can use string to store words or sentences and int for storing whole numbers.",
+    "levelDescription": "basic int ",
+    "levelCode": {
+      "question": [
+        " int myAge = 10;<br>String myName = \"Jimmy\";<br>myAge = myAge + 1;<br><br>What is myAge now?<br>",
+        ""
+      ]
+    },
+    "timer": 600,
+    "chances": 5,
+    "solution": [{
+      "answerPosition": "placeD",
+      "answerCodeSnippet": "10",
+      "id": 5
+    }, {
+      "answerPosition": "placeD",
+      "answerCodeSnippet": "9",
+      "id": 6
+    }, {
+      "answerPosition": "placeD",
+      "answerCodeSnippet": "Jimmy",
+      "id": 7
+    }, {
+      "answerPosition": "placeD",
+      "answerCodeSnippet": "Jimmy1",
+      "id": 8
+    }, {
+      "answerPosition": "place1",
+      "answerCodeSnippet": "11",
+      "id": 9
+    }]
+  }
+
+]
